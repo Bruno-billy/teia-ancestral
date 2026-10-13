@@ -93,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (modal && openModalBtns.length > 0) {
     const modalTitle = document.getElementById('modal-title');
     const modalDesc = document.getElementById('modal-desc');
-    const modalPrice = document.getElementById('modal-price');
     const modalImg = document.getElementById('modal-img');
     const modalBook = document.getElementById('modal-book');
     
@@ -108,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Puxa os dados do HTML
         const title = btn.getAttribute('data-title');
         const desc = btn.getAttribute('data-desc');
-        const price = btn.getAttribute('data-price');
         const imgSrc = btn.getAttribute('data-img');
 
         // Preenche o modal
@@ -117,13 +115,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Formata a descrição quebrando as linhas onde há ponto e vírgula
         modalDesc.innerHTML = desc.replace(/;/g, '.<br><br>'); 
         
-        modalPrice.textContent = price;
         modalImg.src = imgSrc;
         modalImg.alt = title;
 
         // Formata a mensagem do WhatsApp dinamicamente para o botão de dentro da modal
         const numeroZap = "5511960930659";
-        const msgZap = `Olá, Daiana. Li os detalhes no site e tenho interesse em ${title}. Pode me passar mais informações?`;
+        const msgZap = `Oi, Teia Ancestral, gostaria de saber mais sobre os valores do/da ${title}.`;
         modalBook.href = `https://wa.me/${numeroZap}?text=${encodeURIComponent(msgZap)}`;
         
         // Garante que o link do modal abre em nova janela

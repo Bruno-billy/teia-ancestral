@@ -422,7 +422,6 @@ h1 { font-size: clamp(2.8rem, 10vw, 5.8rem); letter-spacing: 0.02em; color: var(
 .modal-body { padding: 2rem; text-align: left; }
 .modal-body h3 { font-size: 1.8rem; color: var(--amber); margin-bottom: 1rem; font-family: var(--serif); text-align: center; }
 .modal-body p { font-size: 0.85rem; color: var(--muted); margin-bottom: 1.5rem; line-height: 1.6; white-space: pre-line; }
-.modal-price { font-size: 1.15rem; color: var(--cream); font-weight: 500; margin-bottom: 1.5rem; padding: 0.8rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: center; }
 .modal-body .button-primary { display: block; text-align: center; width: 100%; }
 
 /* Locais de Atendimento */
@@ -580,18 +579,17 @@ h1 { font-size: clamp(2.8rem, 10vw, 5.8rem); letter-spacing: 0.02em; color: var(
     width: 100%;
     max-width: 380px;
     margin: 0 auto;
-    overflow: hidden; /* Mantém a foto contida no limite da moldura */
+    overflow: hidden;
   }
   
   .portrait img {
     width: 100%;
     height: auto;
-    max-height: 480px; /* Trava a altura para não vazar a página */
+    max-height: 480px;
     object-fit: cover;
     display: block;
   }
 
-  /* Caixa do nome de ponta a ponta e translúcida (preserva a visualização da mão) */
   .portrait figcaption {
     position: absolute;
     bottom: 0;
@@ -599,7 +597,7 @@ h1 { font-size: clamp(2.8rem, 10vw, 5.8rem); letter-spacing: 0.02em; color: var(
     right: 0;
     width: 100%;
     margin: 0;
-    background: rgba(13, 13, 12, 0.45); /* Fundo preto mais transparente */
+    background: rgba(13, 13, 12, 0.45);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     padding: 1rem;
